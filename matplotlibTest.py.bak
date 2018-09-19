@@ -1,0 +1,52 @@
+import os
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
+import matplotlib.pyplot as plt
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+import numpy as np
+
+from mpl_toolkits.mplot3d import Axes3D # This import has side effects required for the kwarg projection='3d' in the call to fig.add_subplot
+import matplotlib.pyplot as plt
+import random
+
+
+minpoint = (0,0)
+maxpoint = (100,100)
+points = (2000,2000)
+spacing = ((maxpoint[0]-minpoint[0])/points[0],(maxpoint[1]-minpoint[1])/points[1])
+
+##maxpointPlus = (maxpoint[0] + spacing[0], maxpoint[1] + spacing[1])
+#print(maxpointPlus)
+
+
+x = np.linspace(minpoint[0],maxpoint[0],points[0])
+y = np.linspace(minpoint[1],maxpoint[1],points[1])
+#Z = np.exp(-(X**2 + Y**2))
+
+#print(X)
+#print(Y)
+#print(Z)
+
+L, n = 2, 400
+#x = np.linspace(-L, L, n)
+#y = x.copy()
+X, Y = np.meshgrid(x, y)
+Z = np.exp(-(X**2 + Y**2))
+fig, ax = plt.subplots(nrows=2, ncols=2, subplot_kw={'projection': '3d'})
+ax[0,0].plot_wireframe(X, Y, Z, rstride=40, cstride=40)
+ax[0,1].plot_surface(X, Y, Z, rstride=40, cstride=40, color='m')
+ax[1,0].plot_surface(X, Y, Z, rstride=12, cstride=12, color='m')
+ax[1,1].plot_surface(X, Y, Z, rstride=20, cstride=20, cmap=cm.hot)
+#for axes in ax.flatten():
+#    axes.set_xticks([-2, -1, 0, 1, 2])
+#    axes.set_yticks([-2, -1, 0, 1, 2])
+#    axes.set_zticks([0, 0.5, 1])
+fig.tight_layout()
+
+plt.savefig('image.png')
