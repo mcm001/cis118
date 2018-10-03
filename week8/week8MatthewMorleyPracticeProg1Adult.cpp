@@ -13,6 +13,7 @@ int main ( ) {
     cout << "Enter your age in years, please";
     cin >> age;
 
+    //Check for adult
     if (age >= 18) { 
         cout << firstName << ", you are an adult.";
     }
