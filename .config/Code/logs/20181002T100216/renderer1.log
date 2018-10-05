@@ -1,0 +1,8 @@
+[2018-10-02 10:02:20.717] [renderer1] [info] no standard startup: not just one text editor
+[2018-10-02 11:45:56.163] [renderer1] [info] no standard startup: not a new window
+[2018-10-03 09:25:46.869] [renderer1] [error] spawn ctags ENOENT: Error: spawn ctags ENOENT
+	at _errnoException (util.js:1024:11)
+	at Process.ChildProcess._handle.onexit (internal/child_process.js:190:19)
+	at onErrorNT (internal/child_process.js:372:16)
+	at _combinedTickCallback (internal/process/next_tick.js:138:11)
+	at process._tickCallback (internal/process/next_tick.js:180:9)

@@ -1,0 +1,55 @@
+[2018-10-04 08:35:05.098] [sharedprocess] [info] main {"machineId":"338e6b7e0c6c5e6e7f1e4bcd84667aa5d83b1126aa7910f3277afb761f99a729"}
+[2018-10-04 08:35:05.298] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:35:05.517] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:35:06.901] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:35:06.959] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:35:07.189] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:35:08.302] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:35:08.585] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:35:10.863] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:35:42.938] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-10-04 08:40:08.733] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:45:08.763] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:50:08.794] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:55:08.820] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:22.509] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:22.765] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:22.784] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:22.795] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:23.218] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:58:23.229] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:58:23.237] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 08:58:30.383] [sharedprocess] [info] Installing extension: vim
+[2018-10-04 08:58:30.399] [sharedprocess] [info] Scanned user extensions: 3
+[2018-10-04 08:58:31.158] [sharedprocess] [info] Downloaded extension: vim /tmp/54673a21-2824-4581-8a42-c19edac3f818
+[2018-10-04 08:58:43.469] [sharedprocess] [info] Extracted extension to /home/matthew/.vscode/extensions/.vscodevim.vim-0.16.6: vscodevim.vim-0.16.6
+[2018-10-04 08:58:43.469] [sharedprocess] [info] Renamed to /home/matthew/.vscode/extensions/vscodevim.vim-0.16.6
+[2018-10-04 08:58:43.470] [sharedprocess] [info] Installation completed. vscodevim.vim-0.16.6
+[2018-10-04 08:58:43.497] [sharedprocess] [info] Extensions installed successfully: vscodevim.vim
+[2018-10-04 08:58:43.654] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 08:58:43.728] [sharedprocess] [info] Scanned system extensions: 71
+[2018-10-04 09:00:08.847] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:05:08.876] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:20:43.756] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:25:43.790] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:30:43.821] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:35:43.946] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:41:02.068] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:46:02.095] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:51:02.129] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 09:56:02.159] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:01:02.186] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:06:02.223] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:11:02.249] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:16:02.273] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:21:02.302] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:26:02.338] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:31:02.365] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:36:02.493] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:41:02.522] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:46:02.572] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:51:02.601] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 10:56:02.627] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 11:01:02.660] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 11:06:02.686] [sharedprocess] [info] Scanned user extensions: 4
+[2018-10-04 11:11:02.713] [sharedprocess] [info] Scanned user extensions: 4

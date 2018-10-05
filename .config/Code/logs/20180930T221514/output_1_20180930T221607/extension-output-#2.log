@@ -1,0 +1,42 @@
+Starting Jedi Python language engine.
+##########Linting Output - pylint##########
+************* Module octoprint_PrusaMeshMap
+19,0,error,E0401:Unable to import 'octoprint.plugin'
+20,0,error,E0401:Unable to import 'octoprint.printer'
+65,8,warning,W0101:Unreachable code
+65,8,warning,W0612:Unused variable 'on_event'
+
+------------------------------------------------------------------
+Your code has been rated at 9.27/10 (previous run: 9.27/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module octoprint_PrusaMeshMap
+19,0,error,E0401:Unable to import 'octoprint.plugin'
+20,0,error,E0401:Unable to import 'octoprint.printer'
+65,8,warning,W0101:Unreachable code
+65,8,warning,W0612:Unused variable 'on_event'
+
+------------------------------------------------------------------
+Your code has been rated at 9.28/10 (previous run: 9.27/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module octoprint_PrusaMeshMap
+19,0,error,E0401:Unable to import 'octoprint.plugin'
+20,0,error,E0401:Unable to import 'octoprint.printer'
+65,8,warning,W0101:Unreachable code
+65,8,warning,W0612:Unused variable 'on_event'
+
+------------------------------------------------------------------
+Your code has been rated at 9.28/10 (previous run: 9.28/10, +0.00)
+
+##########Linting Output - pylint##########
+##########Linting Output - pylint##########
+************* Module octoprint_PrusaMeshMap
+19,0,error,E0401:Unable to import 'octoprint.plugin'
+20,0,error,E0401:Unable to import 'octoprint.printer'
+65,8,warning,W0101:Unreachable code
+65,8,warning,W0612:Unused variable 'on_event'
+
+------------------------------------------------------------------
+Your code has been rated at 9.28/10 (previous run: 9.28/10, +0.00)
+

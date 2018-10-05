@@ -1,0 +1,30 @@
+Starting Jedi Python language engine.
+##########Linting Output - pylint##########
+##########Linting Output - pylint##########
+##########Linting Output - pylint##########
+************* Module wekk8MatthewMorleyPracticeProg1Adult
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+##########Linting Output - pylint##########
+************* Module cppTemplate
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module wekk8MatthewMorleyPracticeProg1Adult
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module cppTemplate
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module cppTemplate
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module cppTemplate
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module wekk8MatthewMorleyPracticeProg1Adult
+2,0,error,E0001:invalid syntax (<string>, line 2)
+##########Linting Output - pylint##########
+************* Module wekk8MatthewMorleyPracticeProg1Adult
+2,0,error,E0001:invalid syntax (<string>, line 2)
+----------Generating Tags----------
+ctags --options=/home/matthew/.vscode/extensions/ms-python.python-2018.8.0/resources/ctagOptions --languages=Python --exclude=**/site-packages/** -o /home/matthew/cis118/.vscode/tags .

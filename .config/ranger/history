@@ -1,0 +1,22 @@
+rename rc.conf
+rename rifle.conf
+rename week7MatthewMorleyLanguageProg3Pemdas.jpg
+rename week7M
+rename week7MatthewMorleyLanguageProg2Inches.jpg
+rename week7MatthewMorleyLanguageProg1Fix.jpg
+shell 
+shell mkdir week8
+open_with 
+rename Week8MatthewMorleyPracticeProg1Adult
+rename 
+rename Week8MatthewMorleyPraciceProg1Adult.jpg
+rename Week8MatthewMorleyProg2Grade.cpp
+rename week8MatthewMorleyPraProg1Adult.cpp
+rename Week8MatthewMorleyPraciceProg3Temp.cpp
+rename Week8MatthewMorleyProg3Temp.cpp
+rename Week8MatthewMorleyProg1Adult.cpp
+rename Week8MatthewMorleyProg1Adult.jpg
+rename Week8MatthewMorleyProg4Eat.jpg
+rename Week8MatthewMorleyProg5Fix.jpg
+delete
+rename .config
