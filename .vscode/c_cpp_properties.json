@@ -1,23 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "MinGW",
+            "intelliSenseMode": "gcc-x64",
             "compilerPath": "C:/mingw64/bin/gcc.exe",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
-            "browse": {
-                "path": [
-                    "${workspaceFolder}"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            }
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
