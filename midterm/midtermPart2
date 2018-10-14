@@ -1,0 +1,26 @@
+#include <iostream> //Fixed typo - oistream -> iostream
+using namespace std; //removed ;
+#include <string>
+int main() {
+   string favoriteFirstName;    
+   int age = 0;     
+   char gender = 'x';       
+   cout << "Enter your favorite first name: ";  // cout allows you to write a message, namee>>name     
+   cin >> favoriteFirstName;                           // cin allows you to input a value      
+   cout << endl; //>> is pointing wrong way, made <<
+   cout << "Enter you age: ";
+   cin >> age;
+   cout << endl;
+   cout << "Enter you Gender F/M: ";
+   cin >> gender;  //Gender --> gender                                  
+    // Logical AND table --  ((exp1) && (exp2) && (exp3) )...
+   if ( ( age > 20 ) && ( gender == 'F') & ( favoriteFirstName == "YourFavoriteNameHere"  )) //added ), favoriteFirstNam >> favoriteFirstName
+    {  // And coniditions: Takes ALL to be TRUE, so result is TRUE
+       cout << endl << " ALL conditions ARE TRUE " << endl;     } //fixed typo in endl
+    else     {        
+       // And onditions: Only takes one FALSE condition, so result is FALSE
+       cout << " One or more conditions is FALSE " << endl;     }//fixed <> --> <<
+    //system("pause"); // pause statement Only for PC, not MAC  - Macs Comment // out this line   
+  return 0;//indented line
+}
+// Fix and run the code.  Turn in fixed code with commends and screen print of successful execution.
