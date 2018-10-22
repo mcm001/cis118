@@ -1,4 +1,5 @@
-15 Questions - Use filename Week10YourNameSwitchQ15
+Matthew Morley
+Week 10 - Switch Q15
 
 Can a switch statement do the same thing as an if else statement? if so, give an example.
 Yes, it can. For example, you can use a switch to take a interger as an input and do a specific thing if the input is "2" vs "4", or use default: as the 'else' part.
@@ -29,20 +30,20 @@ Which are the only data types that can be used with the switch conditions/cases 
 Char and interger and the only data types that can be used with switch cases.
 
 Find a good www.youtube.com video that explains the switch statement in C++, write a summary.
-
+https://www.youtube.com/watch?v=_CelY_ZBXb4
+Switches in c++ are like if statements, with the added benefit of being able to "fall through" and without a lot of fancy conditions you have in if statements. They can be good for doing certain things better than if statements.
 
 What does the default option do in a switch statement ?
 The default option is always going to be "true", as it is true by default. Make sure it's at the bottom, otherwise the switch will fall through every time.
 
 Can you have two or more conditions for a case in a switch ? ( Internet research )
-
+Not that I can find - at least not easily. It is technically possible, but not using switches correctly.
 
 Can you turn the switch statement OFF, after it is turned ON ? ( Internet research )
 You can use break; to exit a switch, which "turns it OFF".
 
 Can you have fall through with cascading if statements ?
-
+Kind of - if you set up a lot of complex conditions, but it will be very complicated.
 
 What do you prefer, the if or switch statement ? Why
-
-
+It depends on what I need to acomplish - if I need something to "fall through", use a switch. But for complex conditions, I will use a switch. 
