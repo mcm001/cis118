@@ -1,9 +1,0 @@
-Starting Jedi Python language engine.
-##########Linting Output - pylint##########
-##########Linting Output - pylint##########
-************* Module slackbot
-4,0,error,E0401:Unable to import 'slackclient'
-
------------------------------------
-Your code has been rated at 8.57/10
-
