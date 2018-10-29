@@ -1,0 +1,56 @@
+1) What facts of reality give rise for the need of Loops ?
+Programmers are really lazy, so loops make everything easier.
+
+2) What are the three parts governing a for loop ?
+The initial code, the condition, and the imcrament parts.
+
+3) What is an Infinite Loop ?
+An infinite loop never exits.
+
+4) Write a Condition that would result in an infinite loop.
+if (int x=1; x<2; )
+	do stuff
+
+5) What type of Sequence is a loop ?
+Repeating sequence
+
+6) What does the flow chart for a for loop look like ?
+Blocks of code connected to each other with a line to the top
+
+7) What is the differences between a pre-test and post-test loop ?
+One checks the condition before code execution, the other after.
+
+8) What is a nested for loop ? Give an example.
+A loop in a loop
+if (int x=1; x < 100, x++) {
+if (int y=1; y<100, y++) {
+do stuff
+}
+do other stuff
+}
+
+9) What does the setw() function do ? Did you use it in your code ?
+
+
+10) Which is better ?
+a. Write a block of code 10 times
+b. Write a block of code 1 time and copy and paste 9 more times
+c. Write a block of code 1 time and place it in a loop structue that repeats it 10
+times
+The last one - less work
+
+11) Research online, the three conditions in the for loop. Which do you need, which can you
+do without ?
+You don't really need all 3 within a loop, but you can put them outside
+
+12) Why do lazy programmers use loops ?
+Because it's less work to use loops
+
+13) What does ‘contiguous’ mean ?
+The loops' code repeats one after the other
+
+14) How are a simple sequence and a loop different ?
+Loops repeat a variable number of times based on a condition - a simple sequence just goes
+
+15) Why do you like or dislike loops ?
+I like loops, but not in c++ - python loops are better and easier for me to think about.
