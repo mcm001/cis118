@@ -7,13 +7,13 @@ int main ()
 {
  char codedLetter;
  char decodedLetter;
- char letter = 'a'; //  change me to a different character.
+ char letter = '$'; //  change me to a different character.
  cout << "Letter = " << letter << endl;
  codedLetter = CodeLetter(letter);
  cout << "Coded Letter = " << codedLetter << endl;
  decodedLetter= DecodeLetter(codedLetter);
  cout << "Decoded Letter = " << decodedLetter << endl;
- system ("pause");
+// system ("pause");
  return 0;
 }
 

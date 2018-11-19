@@ -25,15 +25,17 @@ string intToNumeral ( int year ) {
         workingNum = workingNum - 5;
         roman.append("V");
     }
-    while ( workingNum >= 0 ) {
+    while ( workingNum >= 1 ) {
         workingNum = workingNum - 1;
         roman.append("I");
     }
 
+    return roman;
+
 }
 int main() {
     cout << "what is the year? \n";
-    string year;
+    int year;
     cin >> year;
 
     cout << "The year is actually " << intToNumeral(year) << endl;

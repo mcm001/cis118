@@ -29,9 +29,9 @@ int main() {
     cout << "what is the float? \n";
     cin >> f;
 
-    cout << "the interger squared is " << squareInt(x);
-    cout << "the double squared is " << squareDouble(x);
-    cout << "the float squared is " << squareFloat(x);
+    cout << "the interger squared is " << squareInt(x) << endl;
+    cout << "the double squared is " << squareDouble(d) << endl;
+    cout << "the float squared is " << squareFloat(f) << endl;
 
     return 0;
 

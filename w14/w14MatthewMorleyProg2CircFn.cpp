@@ -3,24 +3,29 @@
 
 using namespace std;
 
-float clacArea ( int radius ) {
+float calculateArea ( float radius ) {
+//    return  0;
     return M_PI * pow(radius,2);
 }
 
-float calcDiam ( int radius ) {
-    return radius * 2;
+float calcDiam ( float radius ) {
+    return (radius * 2);
 }
 
-float calcCircum ( int radius ) {
+float calcCircum ( float radius ) {
     return M_PI * calcDiam(radius);
 }
 
 int main() {
     cout << "Pi is " << M_PI << endl;
     cout << "what is the radius?\n";
-    int radius;
+    float radius;
     cin >> radius;
-    cout << "area: " << calcArea(radius) << endl;
-    cout << "diameter: " << calcDiam(radius) << endl;
-    cout << "circumference: " << calcCircum(radius) << endl;
+    cout << "outputs: \n";
+    cout << "area: " << calculateArea(radius) << endl;
+    cout << "diameter: " << calcDiam (radius) << endl;
+    cout << "circumference: " << calcCircum (radius) << endl;
+
+    return 0;
+
 }

@@ -19,9 +19,9 @@ int main() {
     float side;
     cin >> side;
 
-    cout << "the area is " << calcArea(side):
-    cout << "the diameter is " << calcDiameter(side);
-    cout << "the circumference is " << calcCircum(side);
+    cout << "the area is " << calcArea(side) << endl;
+    cout << "the diameter is " << calcDiameter(side) << endl;
+    cout << "the circumference is " << calcCircum(side) << endl;
 
     return 0;
 }
