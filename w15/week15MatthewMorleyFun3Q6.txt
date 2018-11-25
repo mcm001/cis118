@@ -1,0 +1,31 @@
+6 Questions: ( 4 points )
+
+1) What does pass by value do ?Give a simple code example of a function header and a call…
+
+Pass by value is like writing down a number in you head and handing it to the person next to you to read and remember. For example,
+int function( int input ) {
+}
+
+2) What does pass by reference do ?Give a simple code example of a function header and a call
+
+Pass by reference is like keeping a ledger on paper, filing it away, and someone else takes the same paper and works on it, puts it back, etc.
+
+3) If you has an array of 100 elements, which is easier: a or b. Explain your answer.
+    a. Defining a function with 100 different variables so you can pass all elements of an array into it
+    b. Defining a function what passes just the location of the array, and you use the original array.
+
+I would techincally choose (c), using an array in the function header and passing by value the whole array. But of the two, for sure b would be easier.
+
+4) How is Passing just ONE value into a function rather than passing 100 separate value, like a concept ?
+
+passing by reference using only one value is like a comcept because it reduces many things (like a whole essay) into one thing (like the dewydecimal location of a book in the library, or a URL, or a street address))
+
+5) What are other names for pass by value and pass by reference ?
+
+pass by value: AKA pass by copy
+pass by reference: AKA pass by address, pass by location
+
+6) Do you think pass by reference is used a lot or not ? Explain your answer ?
+
+Not really? I've never used it before, and it will remain pretty niche. At a hardware or assembly code level it is used a lot though.
+
