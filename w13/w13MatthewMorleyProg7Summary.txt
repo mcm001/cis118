@@ -1,0 +1,7 @@
+multi dimensional array: an array in an array (like each element is its own array)
+like a row/collumn for 2d
+
+def like this:
+int arrayname[sizeX][sizeY][sizeZ][sizeA];
+
+literally just use a for loop to cycle thru the dimensions (2x array -> 2 for loops, etc)

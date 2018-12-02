@@ -1,0 +1,87 @@
+1)
+What is the key characteristic of a functions ?
+
+A function is non-contiguous repeating code - it takes arguments and returns only one data type
+
+
+2)
+What facts of reality give rise to the need to create functions ?
+
+I want to do the same thing at different times, and I'm lazy.
+
+
+3)
+What is the function header ?
+
+The function header is what defines the return type of the function, it's name, and its arguments
+
+
+4)
+What is the function body ?
+
+The functions body tells the function what to do and includes a return statement
+
+
+5)
+What are system defined functions ?
+
+System defined functions are things that c++ already knows by default - like loops.
+
+
+6)
+What are user defined 
+function ?
+
+User defined functions are things that I make to enable my lazyness.
+
+
+7)
+What are the 4 ways to set up a function ?
+
+No value in, no return value; no arguments with return; no return with arguments; both arguments and return 
+
+
+8)
+What is a function prototype ?
+
+A function prototype is also called the function header.
+
+9)
+Where can you place a function definition ?
+
+The whole thing can be at the top, or only the prototype can be at the top and the rest can be lower.
+
+
+10)
+What is a function argument ?
+
+Arguments are input data, and can be any valid data type
+
+11)
+What are the 3 key features of function arguments ?
+
+The function arguments can be bool, int, long, str, char, etc; and tbey have to be called out in the definition
+
+12)
+What does a #include <libraryName> statemen
+t do ?
+
+the include function includes prewritten functions like sqrt() or abs() or cout.
+
+
+13)
+Find a website online that has a list of C++ predefined functions.
+
+http://www.cs.fsu.edu/~cop3014p/lectures/ch6_new/index.html
+
+14)
+How many different types of math functions are there in the predefined ‘math’ library ?
+
+http://www.cplusplus.com/reference/cmath/ over 80!
+
+15)
+What types of statements can you put in the body of a function?
+
+Any statement you want - its just like a block of code.
+
+
