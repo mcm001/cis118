@@ -1,0 +1,11 @@
+First input: 10
+return 10 * the thing below this, which is:
+return 9 * the thing below this, which is:
+return 8 * the thing below this, which is:
+return 7 * the thing below this, which is:
+return 6 * the thing below this, which is:
+return 5 * the thing below this, which is:
+return 4 * the thing below this, which is:
+return 3 * the thing below this, which is:
+return 2 * the thing below this, which is:
+return 1

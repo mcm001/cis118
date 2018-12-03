@@ -1,0 +1,11 @@
+First call: counter = 10
+
+called one layer down: 9
+called one layer down: 8
+called one layer down: 7
+called one layer down: 6
+called one layer down: 5
+called one layer down: 4
+called one layer down: 3
+called one layer down: 2
+called one layer down: 1

@@ -1,0 +1,10 @@
+1) Define recursion
+Recursion is calling a function within itself within itself within itself.
+2) What is one way recursion
+One way recursion passws one value deeper into the recursion
+3) What is two way recursion
+Two way recursion passes values deeper and higher
+4) What is linear recursion
+it's where a function calls itself once
+5) What is non linear recursion
+has two or more calls to itself
