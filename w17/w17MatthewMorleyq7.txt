@@ -1,0 +1,7 @@
+How many steps to write to a file 3
+How many steps to read from a file 3 
+What is found in the library <fstream> ifstream and ofstream objects
+What is eof() end of file
+How do you write a string to a file file << string << endl;
+How do you write a char to a file file << char << endl;
+How do you write a line to a file file << linecontents << endl

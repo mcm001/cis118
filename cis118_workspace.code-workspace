@@ -8,7 +8,14 @@
 		"files.associations": {
 			"iostream": "cpp",
 			"iomanip": "cpp",
-			"ostream": "cpp"
+			"ostream": "cpp",
+			"iosfwd": "cpp",
+			"*.tcc": "cpp",
+			"fstream": "cpp",
+			"istream": "cpp",
+			"array": "cpp",
+			"tuple": "cpp",
+			"utility": "cpp"
 		}
 	}
 }
