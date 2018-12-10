@@ -191,7 +191,10 @@ int main() {
 
 
     while (true) {
-        cout << "hi";
+        // cout << "hi";
+        if (remainingp1 = 0) {
+            cout
+        }
     }
 
 
