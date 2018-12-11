@@ -8,7 +8,6 @@ using namespace std;
 
 int intarray1[16][16];
 string strarray1[16][16];
-
 int intarray2[16][16];
 string strarray2[16][16];
 
@@ -108,6 +107,15 @@ void printArray1() {
     }     
 }
 
+void printArray2() {
+    for ( int x=0; x<16; x++) {
+        for ( int y=0; y<16; y++) {
+            cout << setw(4) << strarray2[x][y];
+        }
+        cout << endl;
+    }     
+}
+
 int charToInt(char charicter) {
     int charint;
     charint = (int) charicter  - 88 - 8;
@@ -123,18 +131,14 @@ int strToInt( string str ) {
     return strint;
 }
 
-void updateRowCol(string input) {
-    char row = input[0];
-    string collumn = input.erase(0,1);
-    int rowint = charToInt(row) - 1;
-    int colint = strToInt(collumn) - 1;
-    rowchoice = rowint;
-    colchoice = colint;
-}
-
-
-
-
+// void updateRowCol(string input) {
+//     char row = input[0];
+//     string collumn = input.erase(0,1);
+//     int rowint = charToInt(row) - 1;
+//     int colint = strToInt(collumn) - 1;
+//     rowchoice = rowint;
+//     colchoice = colint;
+// }
 
 void chooseAcell1() {
     cout << "Enter an coordinate (for example, O15)" << endl;
@@ -157,6 +161,58 @@ void chooseAcell1() {
 
 }
 
+void chooseAcell2() {
+    cout << "Enter an coordinate (for example, O15)" << endl;
+    string choice;
+    cin >> choice;
+    char row = choice[0];
+    string collumn = choice.erase(0,1);
+    // cout << " you chose row " << row << " and collumn " << collumn << endl;
+    
+    int rowint = charToInt(row) - 1;
+    int colint = strToInt(collumn) - 1;
+
+    cout << "Your row: " << rowint << " your collumn: " << colint << endl;
+    
+    rowchoice = rowint;
+    colchoice = colint;
+
+    intarray2[rowint+1][colint+1] = 1;
+    strarray2[rowint+1][colint+1] = "[x]";
+
+}
+
+
+void doP1turn(){
+    cout << "P1: guess a cell (for example, O15)";
+    string choice;
+    cin >> choice;
+
+    char row = choice[0];
+    string collumn = choice.erase(0,1);
+    // cout << " you chose row " << row << " and collumn " << collumn << endl;
+    
+    int rowint = charToInt(row) - 1;
+    int colint = strToInt(collumn) - 1;
+    cout << "You chose: " << rowint << ", " << colint << endl;
+    int state = intarray2[rowint][colint];
+    cout << "current state at that coordinate: " << state << endl;
+    
+    if (state == 1) {
+        cout << "guess correct!";
+        remianingp2 -= 1;
+        intarray2[rowint][colint] = 2;
+        strarray2[rowint][colint] = "[P]";
+    } else if ( state == 2) {
+        cout << "you already guessed here";
+    }
+    else {
+        cout << "guess wrong";
+    }
+
+}
+
+
 
 
 int main() {
@@ -167,25 +223,25 @@ int main() {
     initArray();
     // player2.initArray();
 
-    system("clear");
+    // system("clear");
 
-    printArray1();
-    cout << "Player 1: Choose 8 cells to mark: \n";
-    for ( int i=0; i<choices; i++) {
-        chooseAcell1();
-        system("clear");
-        printArray1();
-    }
-    system("clear");
+    // printArray1();
+    // cout << "Player 1: Choose 8 cells to mark: \n";
+    // for ( int i=0; i<choices; i++) {
+    //     chooseAcell1();
+    //     system("clear");
+    //     printArray1();
+    // }
+    // system("clear");
 
     // system("clear");
-    // player2.printArray();
-    // cout << "Player 2: Choose 8 cells to mark: \n";
-    // for ( int i=0; i<player2.choices; i++) {
-    //     player2.chooseAcell();
-    //     system("clear");
-    //     player2.printArray();
-    // }
+    printArray2();
+    cout << "Player 2: Choose 8 cells to mark: \n";
+    for ( int i=0; i<choices; i++) {
+        chooseAcell2();
+        // system("clear");
+        printArray2();
+    }
     // system("clear");
 
 
@@ -193,8 +249,20 @@ int main() {
     while (true) {
         // cout << "hi";
         if (remainingp1 = 0) {
-            cout
+            cout << "P1 is dead! Long live p1";
+            return 0;
         }
+
+        //todo do p1's turn
+        doP1turn();
+
+        if (remianingp2 = 0) {
+            cout << "P2 is dead! Long live p2";
+            return 0;
+        }
+        //todo do p2's turn
+        // doP2turn();
+
     }
 
 
