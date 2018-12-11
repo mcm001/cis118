@@ -15,8 +15,9 @@ int rowchoice;
 int colchoice;
 
 int choices = 3;
-int remainingp1 = choices;
-int remianingp2 = choices;
+int remainingp1 = 3;
+int remianingp2 = 3;
+bool doOneMoreTurn = false;
 
 void initArray() {
     for ( int x=0; x<16; x++) {
@@ -156,9 +157,12 @@ void chooseAcell1() {
     rowchoice = rowint;
     colchoice = colint;
 
+    cout << "int array value used to be " << intarray1[rowint+1][colint+1] << endl;
+
     intarray1[rowint+1][colint+1] = 1;
     strarray1[rowint+1][colint+1] = "[x]";
 
+    cout << "Now it's " << intarray1[rowint+1][colint+1] << endl;
 }
 
 void chooseAcell2() {
@@ -180,6 +184,13 @@ void chooseAcell2() {
     intarray2[rowint+1][colint+1] = 1;
     strarray2[rowint+1][colint+1] = "[x]";
 
+    cout << "int array value used to be " << intarray2[rowint+1][colint+1] << endl;
+
+    intarray1[rowint+1][colint+1] = 1;
+    strarray1[rowint+1][colint+1] = "[x]";
+
+    cout << "Now it's " << intarray2[rowint+1][colint+1] << endl;
+
 }
 
 
@@ -192,22 +203,26 @@ void doP1turn(){
     string collumn = choice.erase(0,1);
     // cout << " you chose row " << row << " and collumn " << collumn << endl;
     
-    int rowint = charToInt(row) - 1;
-    int colint = strToInt(collumn) - 1;
+    int rowint = charToInt(row) ;
+    int colint = strToInt(collumn) ;
     cout << "You chose: " << rowint << ", " << colint << endl;
     int state = intarray2[rowint][colint];
     cout << "current state at that coordinate: " << state << endl;
     
     if (state == 1) {
-        cout << "guess correct!";
-        remianingp2 -= 1;
+        cout << "guess correct!\n";
+        remianingp2 = remianingp2 - 1;
+        cout << "Now you have to find " << remianingp2 << " more cells!\n";
         intarray2[rowint][colint] = 2;
         strarray2[rowint][colint] = "[P]";
+        doOneMoreTurn = true;
     } else if ( state == 2) {
-        cout << "you already guessed here";
+        cout << "you already guessed here\n";
+        doOneMoreTurn = true;
     }
     else {
-        cout << "guess wrong";
+        cout << "guess wrong\n";
+        doOneMoreTurn = false;
     }
 
 }
@@ -223,7 +238,7 @@ int main() {
     initArray();
     // player2.initArray();
 
-    // system("clear");
+    system("clear");
 
     // printArray1();
     // cout << "Player 1: Choose 8 cells to mark: \n";
@@ -239,7 +254,7 @@ int main() {
     cout << "Player 2: Choose 8 cells to mark: \n";
     for ( int i=0; i<choices; i++) {
         chooseAcell2();
-        // system("clear");
+        system("clear");
         printArray2();
     }
     // system("clear");
@@ -248,20 +263,21 @@ int main() {
 
     while (true) {
         // cout << "hi";
-        if (remainingp1 = 0) {
-            cout << "P1 is dead! Long live p1";
+        if (remianingp2 <= 0) {
+            cout << "P2 is dead! Long live p2";
             return 0;
         }
 
         //todo do p1's turn
         doP1turn();
-
-        if (remianingp2 = 0) {
-            cout << "P2 is dead! Long live p2";
-            return 0;
+        if ( doOneMoreTurn = true ) {
+            while (doOneMoreTurn = true) {
+                doP1turn();
+            }
         }
-        //todo do p2's turn
-        // doP2turn();
+
+        cout << "oops, p1, turn over! p2, you are up!";
+
 
     }
 
