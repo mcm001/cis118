@@ -307,6 +307,8 @@ int doP1turn(){
     } else if ( state == 2) {
         cout << "you already guessed here\n";
         whoseTurn = 1;
+        usleep(2000);
+
     }
     else {
         cout << "guess wrong\n";
@@ -342,6 +344,7 @@ int doP2turn(){
     } else if ( state == 2) {
         cout << "you already guessed here\n";
         whoseTurn = 2;
+        usleep(2000);
     }
     else {
         cout << "guess wrong\n";
@@ -398,19 +401,18 @@ int main() {
         }
 
         if ((whoseTurn == 1)) {
+            system("clear");
             cout << "p1s turn" << endl;
             doP1turn();
         }
 
         if ((whoseTurn == 2)) {
+            system("clear");
             cout << "p2s turn" << endl;
             doP2turn();
         }
 
-        // if (whoseTurn = 0) { cout << "game over\n" ; return 0; }
-
-        
-        
+        // if (whoseTurn = 0) { cout << "game over\n" ; return 0; } 
 
     }
 
