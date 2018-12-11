@@ -10,14 +10,17 @@ int intarray1[16][16];
 string strarray1[16][16];
 int intarray2[16][16];
 string strarray2[16][16];
+string guessarray1[16][16];
+string guessarray2[16][16];
 
 int rowchoice;
 int colchoice;
 
 int choices = 3;
-int remainingp1 = 3;
-int remianingp2 = 3;
-bool doOneMoreTurn = false;
+int remainP1 = 3;
+int remainP2 = 3;
+// int doOneMoreTurn = 0;
+int whoseTurn = 1;
 
 void initArray() {
     for ( int x=0; x<16; x++) {
@@ -194,7 +197,7 @@ void chooseAcell2() {
 }
 
 
-void doP1turn(){
+int doP1turn(){
     cout << "P1: guess a cell (for example, O15)";
     string choice;
     cin >> choice;
@@ -211,22 +214,56 @@ void doP1turn(){
     
     if (state == 1) {
         cout << "guess correct!\n";
-        remianingp2 = remianingp2 - 1;
-        cout << "Now you have to find " << remianingp2 << " more cells!\n";
+        remainP2 = remainP2 - 1;
+        cout << "Now you have to find " << remainP2 << " more cells!\n";
         intarray2[rowint][colint] = 2;
         strarray2[rowint][colint] = "[P]";
-        doOneMoreTurn = true;
+        whoseTurn = 1;
     } else if ( state == 2) {
         cout << "you already guessed here\n";
-        doOneMoreTurn = true;
+        whoseTurn = 1;
     }
     else {
         cout << "guess wrong\n";
-        doOneMoreTurn = false;
+        whoseTurn = 2;
     }
+    cout << "whoseTurn: " << whoseTurn << endl;
 
 }
 
+int doP2turn(){
+    cout << "P2: guess a cell (for example, O15)";
+    string choice;
+    cin >> choice;
+
+    char row = choice[0];
+    string collumn = choice.erase(0,1);
+    // cout << " you chose row " << row << " and collumn " << collumn << endl;
+    
+    int rowint = charToInt(row) ;
+    int colint = strToInt(collumn) ;
+    cout << "You chose: " << rowint << ", " << colint << endl;
+    int state = intarray1[rowint][colint];
+    cout << "current state at that coordinate: " << state << endl;
+    
+    if (state == 1) {
+        cout << "guess correct!\n";
+        remainP2 = remainP2 - 1;
+        cout << "Now you have to find " << remainP2 << " more cells!\n";
+        intarray1[rowint][colint] = 2;
+        strarray1[rowint][colint] = "[P]";
+        whoseTurn = 2;
+    } else if ( state == 2) {
+        cout << "you already guessed here\n";
+        whoseTurn = 2;
+    }
+    else {
+        cout << "guess wrong\n";
+        whoseTurn = 1;
+    }
+    cout << "whoseTurn: " << whoseTurn << endl;
+
+}
 
 
 
@@ -240,16 +277,15 @@ int main() {
 
     system("clear");
 
-    // printArray1();
-    // cout << "Player 1: Choose 8 cells to mark: \n";
-    // for ( int i=0; i<choices; i++) {
-    //     chooseAcell1();
-    //     system("clear");
-    //     printArray1();
-    // }
-    // system("clear");
+    printArray1();
+    cout << "Player 1: Choose 8 cells to mark: \n";
+    for ( int i=0; i<choices; i++) {
+        chooseAcell1();
+        system("clear");
+        printArray1();
+    }
+    system("clear");
 
-    // system("clear");
     printArray2();
     cout << "Player 2: Choose 8 cells to mark: \n";
     for ( int i=0; i<choices; i++) {
@@ -261,23 +297,33 @@ int main() {
 
 
 
-    while (true) {
+    while ( true ) {
         // cout << "hi";
-        if (remianingp2 <= 0) {
+        cout << "whoseTurn: " << whoseTurn << endl;
+
+        if (remainP2 <= 0) {
             cout << "P2 is dead! Long live p2";
             return 0;
         }
-
-        //todo do p1's turn
-        doP1turn();
-        if ( doOneMoreTurn = true ) {
-            while (doOneMoreTurn = true) {
-                doP1turn();
-            }
+        if (remainP1 <= 0) {
+            cout << "P1 is dead! Long live p1";
+            return 0;
         }
 
-        cout << "oops, p1, turn over! p2, you are up!";
+        if ((whoseTurn == 1)) {
+            cout << "p1s turn" << endl;
+            doP1turn();
+        }
 
+        if ((whoseTurn == 2)) {
+            cout << "p2s turn" << endl;
+            doP2turn();
+        }
+
+        // if (whoseTurn = 0) { cout << "game over\n" ; return 0; }
+
+        
+        
 
     }
 
