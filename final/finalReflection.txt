@@ -1,0 +1,7 @@
+Lessons learned:
+
+You need to be very careful with your variable names. I spent half an hour troubleshooting, only to find out that the problem was me putting p2's choices into p1's array.
+
+Using c++ classes is awesome. I had an earlier version which used classes. Make it impossible to mix up intarrayP1 and intarrayP2 - you use player1.intarray and player2.intarray! However, this isn't CIS 250 so I broke everything out and did it the long way around.
+
+Furthermore, exit conditions and calling functions requires some thought. I went through three different methods

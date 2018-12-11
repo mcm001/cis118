@@ -17,9 +17,9 @@ string guessarray2[16][16];
 int rowchoice;
 int colchoice;
 
-int choices = 8;
-int remainP1 = 8;
-int remainP2 = 8;
+int choices = 4;
+int remainP1 = 4;
+int remainP2 = 4;
 // int doOneMoreTurn = 0;
 int whoseTurn = 1;
 
@@ -172,7 +172,7 @@ void initArray() {
 void printArray1() {
     for ( int x=0; x<16; x++) {
         for ( int y=0; y<16; y++) {
-            cout << setw(4) << strarray1[x][y];
+            cout << setw(5) << strarray1[x][y];
         }
         cout << endl;
     }     
@@ -181,7 +181,7 @@ void printArray1() {
 void printArray2() {
     for ( int x=0; x<16; x++) {
         for ( int y=0; y<16; y++) {
-            cout << setw(4) << strarray2[x][y];
+            cout << setw(5) << strarray2[x][y];
         }
         cout << endl;
     }     
@@ -190,7 +190,7 @@ void printArray2() {
 void printguess1() {
     for ( int x=0; x<16; x++) {
         for ( int y=0; y<16; y++) {
-            cout << setw(4) << guessarray1[x][y];
+            cout << setw(5) << guessarray1[x][y];
         }
         cout << endl;
     }  
@@ -199,7 +199,7 @@ void printguess1() {
 void printguess2() {
     for ( int x=0; x<16; x++) {
         for ( int y=0; y<16; y++) {
-            cout << setw(4) << guessarray2[x][y];
+            cout << setw(5) << guessarray2[x][y];
         }
         cout << endl;
     }  
@@ -220,17 +220,8 @@ int strToInt( string str ) {
     return strint;
 }
 
-// void updateRowCol(string input) {
-//     char row = input[0];
-//     string collumn = input.erase(0,1);
-//     int rowint = charToInt(row) - 1;
-//     int colint = strToInt(collumn) - 1;
-//     rowchoice = rowint;
-//     colchoice = colint;
-// }
-
 void chooseAcell1() {
-    cout << "Enter an coordinate (for example, O15)" << endl;
+    cout << "Enter a coordinate (for example, O15)" << endl;
     string choice;
     cin >> choice;
     char row = choice[0];
@@ -245,16 +236,16 @@ void chooseAcell1() {
     rowchoice = rowint;
     colchoice = colint;
 
-    cout << "int array value used to be " << intarray1[rowint+1][colint+1] << endl;
+    // cout << "int array value used to be " << intarray1[rowint+1][colint+1] << endl;
 
     intarray1[rowint+1][colint+1] = 1;
     strarray1[rowint+1][colint+1] = "[x]";
 
-    cout << "Now it's " << intarray1[rowint+1][colint+1] << endl;
+    // cout << "Now it's " << intarray1[rowint+1][colint+1] << endl;
 }
 
 void chooseAcell2() {
-    cout << "Enter an coordinate (for example, O15)" << endl;
+    cout << "Enter a coordinate (for example, O15)" << endl;
     string choice;
     cin >> choice;
     char row = choice[0];
@@ -268,23 +259,21 @@ void chooseAcell2() {
     
     rowchoice = rowint;
     colchoice = colint;
+
+
+    // cout << "int array value used to be " << intarray2[rowint+1][colint+1] << endl;
 
     intarray2[rowint+1][colint+1] = 1;
     strarray2[rowint+1][colint+1] = "[x]";
 
-    cout << "int array value used to be " << intarray2[rowint+1][colint+1] << endl;
-
-    intarray1[rowint+1][colint+1] = 1;
-    strarray1[rowint+1][colint+1] = "[x]";
-
-    cout << "Now it's " << intarray2[rowint+1][colint+1] << endl;
+    // cout << "Now it's " << intarray2[rowint+1][colint+1] << endl;
 
 }
 
 
 void doP1turn(){
     printguess1();
-    cout << "P1: guess a cell (for example, O15)";
+    cout << "P1: there are " << remainP2 << " of P2s squares left. guess a cell (for example, O15): ";
     string choice;
     cin >> choice;
 
@@ -294,34 +283,37 @@ void doP1turn(){
     
     int rowint = charToInt(row) ;
     int colint = strToInt(collumn) ;
-    cout << "You chose: " << rowint << ", " << colint << endl;
-    int state = intarray2[rowint][colint];
-    cout << "current state at that coordinate: " << state << endl;
     
-    if (state == 1) {
-        cout << "guess correct!\n";
-        remainP2 = remainP2 - 1;
-        cout << "Now you have to find " << remainP2 << " more cells!\n";
-        intarray2[rowint][colint] = 2;
-        guessarray1[rowint][colint] = "[P]";
-        whoseTurn = 1;
-    } else if ( state == 2) {
-        cout << "you already guessed here\n";
-        whoseTurn = 1;
-        unsigned int usecs = 2000;
-        usleep(usecs);
+    if ( rowint > 15) { cout << "Invalid row selection!" ; whoseTurn = 1; return; } else {
+    
+        cout << "You chose: " << rowint << ", " << colint << endl;
+        int state = intarray2[rowint][colint];
+        cout << "current state at that coordinate: " << state << endl;
+        
+        if (state == 1) {
+            cout << "guess correct!\n";
+            remainP2 = remainP2 - 1;
+            cout << "Now you have to find " << remainP2 << " more cells!\n";
+            intarray2[rowint][colint] = 2;
+            guessarray1[rowint][colint] = "[P]";
+            whoseTurn = 1;
+        } else if ( state == 2) {
+            cout << "you already guessed here\n";
+            whoseTurn = 1;
+            unsigned int usecs = 2000;
+            usleep(usecs);
+        }
+        else {
+            cout << "guess wrong\n";
+            whoseTurn = 2;
+        }
+        // cout << "whoseTurn: " << whoseTurn << endl;
     }
-    else {
-        cout << "guess wrong\n";
-        whoseTurn = 2;
-    }
-    // cout << "whoseTurn: " << whoseTurn << endl;
-
 }
 
 void doP2turn(){
     printguess2();
-    cout << "P2: guess a cell (for example, O15)";
+    cout << "P2: there are " << remainP1 << " of P1s squares left. guess a cell (for example, O15): ";
     string choice;
     cin >> choice;
 
@@ -331,29 +323,32 @@ void doP2turn(){
     
     int rowint = charToInt(row) ;
     int colint = strToInt(collumn) ;
-    cout << "You chose: " << rowint << ", " << colint << endl;
-    int state = intarray1[rowint][colint];
-    cout << "current state at that coordinate: " << state << endl;
-    
-    if (state == 1) {
-        cout << "guess correct!\n";
-        remainP2 = remainP2 - 1;
-        cout << "Now you have to find " << remainP2 << " more cells!\n";
-        intarray1[rowint][colint] = 2;
-        guessarray2[rowint][colint] = "[P]";
-        whoseTurn = 2;
-    } else if ( state == 2) {
-        cout << "you already guessed here\n";
-        whoseTurn = 2;
-        unsigned int usecs = 2000;
-        usleep(2000);
-    }
-    else {
-        cout << "guess wrong\n";
-        whoseTurn = 1;
-    }
-    // cout << "whoseTurn: " << whoseTurn << endl;
 
+    if ( rowint > 15) { cout << "Invalid row selection!" ; whoseTurn = 2; return; } else {
+
+        cout << "You chose: " << rowint << ", " << colint << endl;
+        int state = intarray1[rowint][colint];
+        cout << "current state at that coordinate: " << state << endl;
+        
+        if (state == 1) {
+            cout << "guess correct!\n";
+            remainP1 = remainP1 - 1;
+            cout << "Now you have to find " << remainP1 << " more cells!\n";
+            intarray1[rowint][colint] = 2;
+            guessarray2[rowint][colint] = "[P]";
+            whoseTurn = 2;
+        } else if ( state == 2) {
+            cout << "you already guessed here\n";
+            whoseTurn = 2;
+            unsigned int usecs = 2000;
+            usleep(2000);
+        }
+        else {
+            cout << "guess wrong\n";
+            whoseTurn = 1;
+        }
+        // cout << "whoseTurn: " << whoseTurn << endl;
+    }
 }
 
 
