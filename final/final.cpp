@@ -29,6 +29,9 @@ void initArray() {
             intarray1[x][y] = 0;
             strarray2[x][y] = "[ ]";
             intarray2[x][y] = 0;
+            guessarray1[x][y] = "[ ]";
+            guessarray2[x][y] = "[ ]";
+
         }
     }
 
@@ -99,6 +102,69 @@ void initArray() {
     strarray2[14][0] = "[N]";
     strarray2[15][0] = "[O]";
 
+    guessarray2[0][0] = "[ ]";
+    guessarray2[0][1] = "[1]";
+    guessarray2[0][2] = "[2]";
+    guessarray2[0][3] = "[3]";
+    guessarray2[0][4] = "[4]";
+    guessarray2[0][5] = "[5]";
+    guessarray2[0][6] = "[6]";
+    guessarray2[0][7] = "[7]";
+    guessarray2[0][8] = "[8]";
+    guessarray2[0][9] = "[9]";
+    guessarray2[0][10] = "[10]";
+    guessarray2[0][11] = "[11]";
+    guessarray2[0][12] = "[12]";
+    guessarray2[0][13] = "[13]";
+    guessarray2[0][14] = "[14]";
+    guessarray2[0][15] = "[15]";
+    guessarray2[1][0] = "[A]";
+    guessarray2[2][0] = "[B]";
+    guessarray2[3][0] = "[C]";
+    guessarray2[4][0] = "[D]";
+    guessarray2[5][0] = "[E]";
+    guessarray2[6][0] = "[F]";
+    guessarray2[7][0] = "[G]";
+    guessarray2[8][0] = "[H]";
+    guessarray2[9][0] = "[I]";
+    guessarray2[10][0] = "[J]";
+    guessarray2[11][0] = "[K]";
+    guessarray2[12][0] = "[K]";
+    guessarray2[13][0] = "[M]";
+    guessarray2[14][0] = "[N]";
+    guessarray2[15][0] = "[O]";
+
+    guessarray1[0][0] = "[ ]";
+    guessarray1[0][1] = "[1]";
+    guessarray1[0][2] = "[2]";
+    guessarray1[0][3] = "[3]";
+    guessarray1[0][4] = "[4]";
+    guessarray1[0][5] = "[5]";
+    guessarray1[0][6] = "[6]";
+    guessarray1[0][7] = "[7]";
+    guessarray1[0][8] = "[8]";
+    guessarray1[0][9] = "[9]";
+    guessarray1[0][10] = "[10]";
+    guessarray1[0][11] = "[11]";
+    guessarray1[0][12] = "[12]";
+    guessarray1[0][13] = "[13]";
+    guessarray1[0][14] = "[14]";
+    guessarray1[0][15] = "[15]";
+    guessarray1[1][0] = "[A]";
+    guessarray1[2][0] = "[B]";
+    guessarray1[3][0] = "[C]";
+    guessarray1[4][0] = "[D]";
+    guessarray1[5][0] = "[E]";
+    guessarray1[6][0] = "[F]";
+    guessarray1[7][0] = "[G]";
+    guessarray1[8][0] = "[H]";
+    guessarray1[9][0] = "[I]";
+    guessarray1[10][0] = "[J]";
+    guessarray1[11][0] = "[K]";
+    guessarray1[12][0] = "[K]";
+    guessarray1[13][0] = "[M]";
+    guessarray1[14][0] = "[N]";
+    guessarray1[15][0] = "[O]";
 
 }
 
@@ -118,6 +184,24 @@ void printArray2() {
         }
         cout << endl;
     }     
+}
+
+void printguess1() {
+    for ( int x=0; x<16; x++) {
+        for ( int y=0; y<16; y++) {
+            cout << setw(4) << guessarray1[x][y];
+        }
+        cout << endl;
+    }  
+}
+
+void printguess2() {
+    for ( int x=0; x<16; x++) {
+        for ( int y=0; y<16; y++) {
+            cout << setw(4) << guessarray2[x][y];
+        }
+        cout << endl;
+    }  
 }
 
 int charToInt(char charicter) {
@@ -198,6 +282,7 @@ void chooseAcell2() {
 
 
 int doP1turn(){
+    printguess1();
     cout << "P1: guess a cell (for example, O15)";
     string choice;
     cin >> choice;
@@ -217,7 +302,7 @@ int doP1turn(){
         remainP2 = remainP2 - 1;
         cout << "Now you have to find " << remainP2 << " more cells!\n";
         intarray2[rowint][colint] = 2;
-        strarray2[rowint][colint] = "[P]";
+        guessarray1[rowint][colint] = "[P]";
         whoseTurn = 1;
     } else if ( state == 2) {
         cout << "you already guessed here\n";
@@ -232,6 +317,7 @@ int doP1turn(){
 }
 
 int doP2turn(){
+    printguess2();
     cout << "P2: guess a cell (for example, O15)";
     string choice;
     cin >> choice;
@@ -251,7 +337,7 @@ int doP2turn(){
         remainP2 = remainP2 - 1;
         cout << "Now you have to find " << remainP2 << " more cells!\n";
         intarray1[rowint][colint] = 2;
-        strarray1[rowint][colint] = "[P]";
+        guessarray2[rowint][colint] = "[P]";
         whoseTurn = 2;
     } else if ( state == 2) {
         cout << "you already guessed here\n";
@@ -296,6 +382,7 @@ int main() {
     // system("clear");
 
 
+    system("clear");
 
     while ( true ) {
         // cout << "hi";
