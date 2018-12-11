@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>  
 #include <stdlib.h>   
+#include <unistd.h>
 
 using namespace std;
 
@@ -16,9 +17,9 @@ string guessarray2[16][16];
 int rowchoice;
 int colchoice;
 
-int choices = 3;
-int remainP1 = 3;
-int remainP2 = 3;
+int choices = 8;
+int remainP1 = 8;
+int remainP2 = 8;
 // int doOneMoreTurn = 0;
 int whoseTurn = 1;
 
@@ -281,7 +282,7 @@ void chooseAcell2() {
 }
 
 
-int doP1turn(){
+void doP1turn(){
     printguess1();
     cout << "P1: guess a cell (for example, O15)";
     string choice;
@@ -307,18 +308,18 @@ int doP1turn(){
     } else if ( state == 2) {
         cout << "you already guessed here\n";
         whoseTurn = 1;
-        usleep(2000);
-
+        unsigned int usecs = 2000;
+        usleep(usecs);
     }
     else {
         cout << "guess wrong\n";
         whoseTurn = 2;
     }
-    cout << "whoseTurn: " << whoseTurn << endl;
+    // cout << "whoseTurn: " << whoseTurn << endl;
 
 }
 
-int doP2turn(){
+void doP2turn(){
     printguess2();
     cout << "P2: guess a cell (for example, O15)";
     string choice;
@@ -344,13 +345,14 @@ int doP2turn(){
     } else if ( state == 2) {
         cout << "you already guessed here\n";
         whoseTurn = 2;
+        unsigned int usecs = 2000;
         usleep(2000);
     }
     else {
         cout << "guess wrong\n";
         whoseTurn = 1;
     }
-    cout << "whoseTurn: " << whoseTurn << endl;
+    // cout << "whoseTurn: " << whoseTurn << endl;
 
 }
 
@@ -389,7 +391,7 @@ int main() {
 
     while ( true ) {
         // cout << "hi";
-        cout << "whoseTurn: " << whoseTurn << endl;
+        // cout << "whoseTurn: " << whoseTurn << endl;
 
         if (remainP2 <= 0) {
             cout << "P2 is dead! Long live p2";
